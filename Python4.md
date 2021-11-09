@@ -122,33 +122,38 @@ print(angka[2])
 ### Source Code
 
 ```py
-is_day = False
-is_night = False
+# Perbedaan dengan list, isi tuple tidak bisa diubah
 
-if is_day: 
-    print("Selamat Siang") 
-elif is_night: 
-    print("Selamat Malam") 
-else:
-    print("Abigail Perkasa") 
+angka = (1, 2, 3)
+
+# x = angka[0]
+# y = angka[1]
+# z = angka[2]
+
+x, y, z = angka
+# x, _, _ = angka "_" merupakan variable yang tak akan digunakan
+# x, *a = angka sisa dari tuple akan dimasukkan kedalam variable a
+print(z)
 ```
 ### VS Code & Output
-![R1](https://user-images.githubusercontent.com/93004722/140647175-b1ae7fc1-075a-4c75-a3dd-69faa3ce7bb5.PNG)
+![A7](https://user-images.githubusercontent.com/93004722/140865428-ade8018d-ea46-423f-8d2e-9a59dd9cdb8b.PNG)
 
 ## 8. Dictionary
 ### Source Code
 
 ```py
-grade = 4
+player = {
+    "name":"Abigail Perkasa",
+    "age":19,
+    "is_admin":True
+}
 
-if grade >= 8:
-    print("Nilai kamu A")
-elif grade >= 7:
-    print("Nilai kamu B")
-elif grade >= 6:
-    print("Nilai kamu C")
-else:
-    print("Makanya belajar yang rajin")
+temp = player.get("age") # nickname tidak ada dalam dict
+print(temp)
+addObj = player["angka"] = 7 # menambahkan key value dict
+print(addObj)
+data = player["name"]
+print(data)
 ```
 ### VS Code & Output
-![R2](https://user-images.githubusercontent.com/93004722/140647557-33b34eb3-9080-40da-ba9f-67c72317c17c.PNG)
+![A8](https://user-images.githubusercontent.com/93004722/140866577-df5205c9-d5f4-49b4-bbb8-65852ee56c08.PNG)
